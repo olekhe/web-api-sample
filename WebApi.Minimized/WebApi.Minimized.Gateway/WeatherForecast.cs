@@ -1,6 +1,6 @@
 using System;
 
-namespace WebApi.Minimized
+namespace WebApi.Minimized.Gateway
 {
     public class WeatherForecast
     {

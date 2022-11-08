@@ -7,7 +7,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace WebApi.Minimized
+namespace WebApi.Minimized.Gateway
 {
     public class Program
     {
