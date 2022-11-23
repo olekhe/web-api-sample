@@ -7,10 +7,10 @@ using WebApi.Minimized.Core.Entities;
 
 namespace WebApi.Minimized.Services.Queries
 {
-    public static class CityQueriesExtensions
+    public static class NewsQueriesExtensions
     {
-        public static IQueryable<City> AllCities(this IQueryable<City> query)
+        public static IQueryable<News> AllNews(this IQueryable<News> query)
              => query
-                 .Include(x => x.BusCity);
+                 .Include(x => x.NewsId);
     }
 }
