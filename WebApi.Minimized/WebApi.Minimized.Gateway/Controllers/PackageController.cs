@@ -41,7 +41,7 @@ namespace WebApi.Minimized.Gateway.Controllers
                 .ToList();
         }
 
-        [HttpGet("get-packages/{id:packageId}")]
+        [HttpGet("get-packages/details/{id:packageId}")]
         public IEnumerable<Package> GetPackageDetails(int id)
         {
             return _repository

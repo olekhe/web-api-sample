@@ -32,7 +32,7 @@ namespace WebApi.Minimized.Gateway.Controllers
                 .ToList();
         }
 
-        [HttpGet("get-excursion/{id:excursionId}")]
+        [HttpGet("get-excursion/details/{id:excursionId}")]
         public IEnumerable<Excursion> GetExcursionDetails(int id)
         {
             return _repository
