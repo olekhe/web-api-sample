@@ -26,12 +26,10 @@ namespace WebApi.Minimized.Gateway.Controllers
         [HttpGet("get-news")]
         public IEnumerable<News> GetNews()
         {
-            var news = _repository
+            return _repository
                 .Query<News>()
                 .AllNews()
                 .ToList();
-
-            return news;
         }
 
     }

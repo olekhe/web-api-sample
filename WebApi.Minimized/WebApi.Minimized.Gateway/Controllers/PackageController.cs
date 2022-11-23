@@ -24,7 +24,7 @@ namespace WebApi.Minimized.Gateway.Controllers
         }
 
         [HttpGet("get-packages")]
-        public IEnumerable<Package> AllPackages()
+        public IEnumerable<Package> GetAllPackages()
         {
             return _repository
                 .Query<Package>()
@@ -32,8 +32,17 @@ namespace WebApi.Minimized.Gateway.Controllers
                 .ToList();
         }
 
+        [HttpGet("get-packages/{id:categoryPackageId}")]
+        public IEnumerable<Package> GetCategoryPackages(int categoryPackageId)
+        {
+            return _repository
+                .Query<Package>()
+                .CategoryPackages(categoryPackageId)
+                .ToList();
+        }
+
         [HttpGet("get-packages/{id:packageId}")]
-        public IEnumerable<Package> CategoryPackages(int packageId)
+        public IEnumerable<Package> GetPackageDetailsQueriesExtensions(int packageId)
         {
             return _repository
                 .Query<Package>()
