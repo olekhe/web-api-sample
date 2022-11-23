@@ -33,20 +33,20 @@ namespace WebApi.Minimized.Gateway.Controllers
         }
 
         [HttpGet("get-packages/{id:categoryPackageId}")]
-        public IEnumerable<Package> GetCategoryPackages(int categoryPackageId)
+        public IEnumerable<Package> GetPackagesByCategory(int id)
         {
             return _repository
                 .Query<Package>()
-                .CategoryPackages(categoryPackageId)
+                .CategoryPackages(id)
                 .ToList();
         }
 
         [HttpGet("get-packages/{id:packageId}")]
-        public IEnumerable<Package> GetPackageDetailsQueriesExtensions(int packageId)
+        public IEnumerable<Package> GetPackageDetails(int id)
         {
             return _repository
                 .Query<Package>()
-                .CategoryPackages(packageId)
+                .DetailsPackage(id)
                 .ToList();
         }
     }

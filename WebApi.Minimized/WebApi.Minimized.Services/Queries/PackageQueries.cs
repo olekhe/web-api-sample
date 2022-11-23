@@ -23,7 +23,7 @@ namespace WebApi.Minimized.Services.Queries
 
     public static class PackageDetailsQueriesExtensions
     {
-        public static IQueryable<Package> DetailsPackages(this IQueryable<Package> query, int packageId)
+        public static IQueryable<Package> DetailsPackage(this IQueryable<Package> query, int packageId)
              => query
                  .Where(x => x.PackageId == packageId);
     }

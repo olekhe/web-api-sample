@@ -33,11 +33,11 @@ namespace WebApi.Minimized.Gateway.Controllers
         }
 
         [HttpGet("get-excursion/{id:excursionId}")]
-        public IEnumerable<Excursion> GetExcursionDetailsQueriesExtensions(int excursionId)
+        public IEnumerable<Excursion> GetExcursionDetails(int id)
         {
             return _repository
                 .Query<Excursion>()
-                .ExcursionDetails(excursionId)
+                .ExcursionDetails(id)
                 .ToList();
         }
 
