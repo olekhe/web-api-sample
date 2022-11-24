@@ -16,14 +16,14 @@ namespace WebApi.Minimized.Services.Queries
 
     public static class PackageByCategoryQueriesExtensions
     {
-        public static IQueryable<Package> CategoryPackages(this IQueryable<Package> query, int categoryPackageId)
+        public static IQueryable<Package> CategoryPackages(this IQueryable<Package> query, decimal categoryPackageId)
              => query
                  .Where(x => x.DestId == categoryPackageId);
     }
 
     public static class PackageDetailsQueriesExtensions
     {
-        public static IQueryable<Package> DetailsPackage(this IQueryable<Package> query, int packageId)
+        public static IQueryable<Package> DetailsPackage(this IQueryable<Package> query, decimal packageId)
              => query
                  .Where(x => x.PackageId == packageId);
     }

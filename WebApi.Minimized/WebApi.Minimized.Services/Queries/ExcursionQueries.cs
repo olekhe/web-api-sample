@@ -12,7 +12,7 @@ namespace WebApi.Minimized.Services.Queries
         public static IQueryable<Excursion> AllExcursion(this IQueryable<Excursion> query)
              => query
                  .Include(x => x.ExcursionId);
-        public static IQueryable<Excursion> ExcursionDetails(this IQueryable<Excursion> query, int excursionId)
+        public static IQueryable<Excursion> ExcursionDetails(this IQueryable<Excursion> query, decimal excursionId)
              => query
                 .Include(x => x.ExcursionId)
                 .Where(x => x.ExcursionId == excursionId);

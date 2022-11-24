@@ -32,8 +32,8 @@ namespace WebApi.Minimized.Gateway.Controllers
                 .ToList();
         }
 
-        [HttpGet("get-packages/{id:categoryPackageId}")]
-        public IEnumerable<Package> GetPackagesByCategory(int id)
+        [HttpGet("get-packages/category/{id:categoryPackageId}")]
+        public IEnumerable<Package> GetPackagesByCategory(decimal id)
         {
             return _repository
                 .Query<Package>()
@@ -42,7 +42,7 @@ namespace WebApi.Minimized.Gateway.Controllers
         }
 
         [HttpGet("get-packages/details/{id:packageId}")]
-        public IEnumerable<Package> GetPackageDetails(int id)
+        public IEnumerable<Package> GetPackageDetails(decimal id)
         {
             return _repository
                 .Query<Package>()
