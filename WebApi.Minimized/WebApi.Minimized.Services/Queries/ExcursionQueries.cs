@@ -14,7 +14,6 @@ namespace WebApi.Minimized.Services.Queries
                  .Include(x => x.ExcursionId);
         public static IQueryable<Excursion> ExcursionDetails(this IQueryable<Excursion> query, decimal excursionId)
              => query
-                .Include(x => x.ExcursionId)
                 .Where(x => x.ExcursionId == excursionId);
     }
 }
