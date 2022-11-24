@@ -12,26 +12,25 @@ namespace WebApi.Minimized.Gateway.Controllers
 {
     [ApiController]
     [Route("[controller]")]
-    public class MainController : ControllerBase
+    public class NewsController : ControllerBase
     {
-        private readonly ILogger<MainController> _logger;
+        private readonly ILogger<NewsController> _logger;
         private readonly IGenericRepository _repository;
 
-        public MainController(ILogger<MainController> logger, IGenericRepository repository)
+        public NewsController(ILogger<NewsController> logger, IGenericRepository repository)
         {
             _logger = logger;
             _repository = repository;
         }
 
-        [HttpGet("get-cities")]
-        public IEnumerable<City> GetCities()
+        [HttpGet("get-news")]
+        public IEnumerable<News> GetNews()
         {
-            var cities = _repository
-                .Query<City>()
-                .AllCities()
+            return _repository
+                .Query<News>()
+                .AllNews()
                 .ToList();
-
-            return cities;
         }
+
     }
 }
